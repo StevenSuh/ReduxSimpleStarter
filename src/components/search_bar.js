@@ -9,7 +9,7 @@ class SearchBar extends Component {
 
   onInputChange(term) {
     this.setState({term});
-    this.props.onSearchTermChange(term);
+    // this.props.onSearchTermChange(term);
   }
 
   onEnterPress(e) {
@@ -27,7 +27,7 @@ class SearchBar extends Component {
           id="search"
           value={this.state.term}
           onChange={ event => this.onInputChange(event.target.value) }
-          // onKeyPress={ event => this.onEnterPress(event) }
+          onKeyPress={ event => this.onEnterPress(event) }
         />
       </div>
     );
